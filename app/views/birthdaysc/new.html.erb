@@ -1,13 +1,34 @@
 <h1>Add a new birthday</h1>
 <br/>
 
-<%= form_with(model: @birthday, local: true) do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-
-    <%# <%= f.label %> %>
-    <%# <%= f.email_field%> %>
-
-    <%= f.submit "Create birthday" %>
-
+<%# <%= form_with(model: @birthday, local: true) do |f| %>
+<div margin-left:10px>
+    <%= form_with scope: :birthday, url: birthdaysc_index_path, local: true  do |f| %>
+        <%= f.label :name %>
+        <br>
+        <%= f.text_field :name %>
+        <br>
+        <br>
+        <%= f.label :dayofbirth %>
+        <br>
+        <%= f.date_field :dayofbirth %> 
+        <br>
+        <br>
+        <%= f.label :age %>
+        <br>
+        <%= f.number_field :age %> 
+        <br><br>
+        <%= f.label :sex %>
+        <br>
+        <%= f.radio_button :sex, 'male' %> 
+        <%= f.label :sex_male, 'male'%> 
+        <br>
+        <%= f.radio_button :sex, 'female' %> 
+        <%= f.label :sex_female, 'female' %> 
+        
+        <br><br>
+        
+        
+        <%= f.submit "Create birthday" %>
+</div>
 <% end %>

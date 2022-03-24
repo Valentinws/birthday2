@@ -1,8 +1,13 @@
 class BirthdayscController < ApplicationController
   def new
-    birthdayhash = {name: 'va'}
-    @birthday = birthdayhash
+  
+
   end
+
+  def create
+    render plain: params[:birthday].inspect
+  end
+
 
   def show
   end
