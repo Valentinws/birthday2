@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  name: MyString
+  dayofbirth: 2022-03-24
+  age: 
+  sex: MyString
+
+two:
+  id: 1
+  name: MyString
+  dayofbirth: 2022-03-24
+  age: 
+  sex: MyString

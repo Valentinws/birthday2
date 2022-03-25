@@ -1,34 +1,39 @@
-<h1>Add a new birthday</h1>
-<br/>
 
-<%# <%= form_with(model: @birthday, local: true) do |f| %>
-<div margin-left:10px>
-    <%= form_with scope: :birthday, url: birthdaysc_index_path, local: true  do |f| %>
-        <%= f.label :name %>
+<div class="container" style="margin:auto; width:35%; padding:30px;" >
+<h1 class="col text-center" >Add a new birthday</h1>
+<br/>
+<%= form_with(model: @birthdaylocal, url: birthdaysc_index_path, local: true) do |f| %>
+    <%# # <%= form_with scope: :birthdaym , url: birthdaysc_index_path, local: true  do |f|  %>
+        <%= f.label :name, class:'form-label' %>
+         
+        <%= f.text_field :name , class:'form-control'%>
+         
+         
+        <%= f.label :dayofbirth, class:'form-label' %>
+         
+        <%= f.date_field :dayofbirth, class:'form-control' %> 
+         
+         
+        <%= f.label :age, class:'form-label' %>
+         
+        <%= f.number_field :age, class:'form-control' %> 
+          
+            <%= f.label :sex %>
+    <div class="form-check">
+             
+            <%= f.radio_button :sex, 'male' ,{ class:"form-check-input" }%> 
+            <%= f.label :sex_male, 'male', class:'form-check-label'%> 
+    </div>
+    <div class="form-check">
+             
+            <%= f.radio_button :sex, 'female', { class:'form-check-input'} %> 
+            <%= f.label :sex_female, 'female', class:'form-check-label' %> 
+    </div>
+          
+    
         <br>
-        <%= f.text_field :name %>
-        <br>
-        <br>
-        <%= f.label :dayofbirth %>
-        <br>
-        <%= f.date_field :dayofbirth %> 
-        <br>
-        <br>
-        <%= f.label :age %>
-        <br>
-        <%= f.number_field :age %> 
-        <br><br>
-        <%= f.label :sex %>
-        <br>
-        <%= f.radio_button :sex, 'male' %> 
-        <%= f.label :sex_male, 'male'%> 
-        <br>
-        <%= f.radio_button :sex, 'female' %> 
-        <%= f.label :sex_female, 'female' %> 
-        
-        <br><br>
-        
-        
-        <%= f.submit "Create birthday" %>
-</div>
+        <div class="col text-center">
+            <%= f.submit "Create birthday", class:'btn btn-warning' %>
+        </div>
 <% end %>
+</div>

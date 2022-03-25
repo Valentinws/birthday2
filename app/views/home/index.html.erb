@@ -1,10 +1,7 @@
-
-<% render 'home/header'%>
-
 <ul>
 <% if user_signed_in?%>
-<li> <%= link_to 'See birthdays', "#" %> </li>
-<li> <%= link_to 'Add a friends birthday', "#" %> </li>
+<li> <%= link_to 'See birthdays', birthdaysc_index_path %> </li>
+<li> <%= link_to 'Add a friends birthday', new_birthdaysc_path %> </li>
 <% else %>
 <p>A simple app for keeping your friends birthdays!</p>
 <li> <%= link_to 'Log in', new_user_session_path %> </li>

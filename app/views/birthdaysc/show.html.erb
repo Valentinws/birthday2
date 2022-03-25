@@ -1,2 +1,27 @@
-<h1>Birthdaysc#show</h1>
-<p>Find me in app/views/birthdaysc/show.html.erb</p>
+<div class="container bg-light rounded-3 border p-4" style="text-align:center; margin:auto; width:35%; ">
+    <div class='row'><h1 style="align-text:center;">
+    <%= @birthdaylocal.name%>
+    </h1></div>
+    <br>
+    <div class='row'>
+        <div class='col'> 
+        Birthday:<br>
+        Age:<br>
+        Sex:<br>
+        Created:<br>
+        Updated: <br>
+        </div>
+    
+        <div class='col'> 
+        Birthday: <%= @birthdaylocal.dayofbirth%><br> 
+        Age: <%= @birthdaylocal.age%><br>
+        Sex: <%= @birthdaylocal.sex%><br>
+        Created at: <%= @birthdaylocal.created_at%><br>
+        Updated at: <%= @birthdaylocal.updated_at%><br> 
+        </div><br>
+        <br><br>
+</div>    <br>
+   <div> <div class='row'><%= link_to "Back to the birthdays", birthdaysc_index_path, class:'btn btn-warning' %>
+    </div>
+</div>
+

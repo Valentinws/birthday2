@@ -1,0 +1,37 @@
+<div class='row'>
+    <div class='col-1'></div>
+    <div class='col'>
+            <h1 style='text-align:center;'>All Birthdays</h1>
+            <br><br>
+
+            <table class='table border rounded-3 ' >
+                <tr class='bg-light'>
+                    <th><%=link_to "Name", sort:'name' %></th>
+                    <th><%=link_to "Birthday", sort:'dayofbirth' %></th>
+                    <th><%=link_to "Age", sort:'age' %></th>
+                    <th><%=link_to "Sex", sort:'sex' %></th>
+                    <th><%=link_to "Created", sort:'created_at' %></th>
+                    <th><%=link_to "Updated", sort:'updated_at' %></th>
+                    <th>Options</th>
+                </tr>
+
+
+            <% @birthdaylocal.each do |v|%>
+                <tr>
+                    <td> <%= v.name%> </td>
+                    <td><%= v.dayofbirth%> </td>
+                    <td><%= v.age%></td>
+                    <td><%= v.sex%></td>
+                    <td><%= v.created_at%></td>
+                    <td><%= v.updated_at%></td>
+                    <td>
+                        <%= link_to "Show", birthdaysc_path(v), class:'btn btn-warning'%>
+                        <%= link_to "Edit", edit_birthdaysc_path(v),  class:'btn btn-warning'%>
+                        <%= link_to "Delete", birthdaysc_path(v), method:'delete', class:'btn btn-warning'%>
+                    </td>
+                </tr>
+            <% end %>
+            </table>
+    </div>
+    <div class='col-1'>
+</div>
