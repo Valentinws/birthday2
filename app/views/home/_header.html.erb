@@ -20,7 +20,7 @@
 
         </ul>
         <ul class="navbar-nav d-flex"><% if user_signed_in?%>
-            <li class="nav-item ml-auto"> <%= link_to 'Log out', destroy_user_session_path,  class: 'nav-link' %> </li>
+            <li class="nav-item ml-auto"> <%= link_to 'Log out', destroy_user_session_path, method:'delete',  class: 'nav-link' %> </li>
             <li class="nav-item ml-auto"> <%= link_to 'Edit user', edit_user_registration_path, class: 'nav-link' %> </li>
           <% end %>
           </ul>

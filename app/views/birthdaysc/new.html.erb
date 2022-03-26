@@ -17,6 +17,8 @@
         <%= f.label :age, class:'form-label' %>
          
         <%= f.number_field :age, class:'form-control' %> 
+        
+        <%= f.number_field :user_id,  value:current_user.id, type: :hidden, class:'form-control' %>  
           
             <%= f.label :sex %>
     <div class="form-check">

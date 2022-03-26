@@ -1,10 +1,11 @@
-<div class="container bg-light rounded-3 border p-4" style="text-align:center; margin:auto; width:35%; ">
-    <div class='row'><h1 style="align-text:center;">
+<div class="container bg-light rounded-3 border p-4" style=" margin:auto; width:35%; ">
+    <div class='row' style='align-text:center;'>
+    <h1 style="align-text:center;">
     <%= @birthdaylocal.name%>
     </h1></div>
     <br>
     <div class='row'>
-        <div class='col'> 
+        <div class='col-3'> 
         Birthday:<br>
         Age:<br>
         Sex:<br>
@@ -12,12 +13,12 @@
         Updated: <br>
         </div>
     
-        <div class='col'> 
-        Birthday: <%= @birthdaylocal.dayofbirth%><br> 
-        Age: <%= @birthdaylocal.age%><br>
-        Sex: <%= @birthdaylocal.sex%><br>
-        Created at: <%= @birthdaylocal.created_at%><br>
-        Updated at: <%= @birthdaylocal.updated_at%><br> 
+        <div class='col' > 
+        <%= @birthdaylocal.dayofbirth%><br> 
+         <%= @birthdaylocal.age%><br>
+         <%= @birthdaylocal.sex%><br>
+         <%= @birthdaylocal.created_at%><br>
+         <%= @birthdaylocal.updated_at%><br> 
         </div><br>
         <br><br>
 </div>    <br>

@@ -17,6 +17,7 @@
 
 
             <% @birthdaylocal.each do |v|%>
+                <% if current_user == v.user %>
                 <tr>
                     <td> <%= v.name%> </td>
                     <td><%= v.dayofbirth%> </td>
@@ -30,6 +31,7 @@
                         <%= link_to "Delete", birthdaysc_path(v), method:'delete', class:'btn btn-warning'%>
                     </td>
                 </tr>
+                <% end%>
             <% end %>
             </table>
     </div>
