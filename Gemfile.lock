@@ -223,6 +223,7 @@ GEM
 
 PLATFORMS
   -darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap (>= 1.4.4)
@@ -241,7 +242,6 @@ DEPENDENCIES
   spring
   sqlite3 (~> 1.4)
   turbolinks (~> 5)
-  tzinfo-data
   web-console (>= 4.1.0)
   webdrivers
   webpacker (~> 5.0)
