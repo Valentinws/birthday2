@@ -1,0 +1,30 @@
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+
+
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    font-family: 'Montserrat',sans-serif;
+    text-align: center;
+  }
+  
+  .container{
+    flex-grow: 1;
+    color: #000;
+  }
+  
+  footer{
+    background: #000;
+    color: #fff;
+    height: 50px;
+    flex-grow: 0;
+  }
+  
+  
