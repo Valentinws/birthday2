@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_26_070017) do
+ActiveRecord::Schema.define(version: 2022_03_31_112616) do
 
   create_table "birthdayms", force: :cascade do |t|
     t.string "name"
@@ -23,10 +23,51 @@ ActiveRecord::Schema.define(version: 2022_03_26_070017) do
     t.index ["user_id"], name: "index_birthdayms_on_user_id"
   end
 
+  create_table "birthdays", force: :cascade do |t|
+    t.string "name"
+    t.date "dayofbirth"
+    t.integer "age"
+    t.string "sex"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_birthdays_on_user_id"
+  end
+
+  create_table "models", force: :cascade do |t|
+    t.string "Birthday"
+    t.string "name"
+    t.date "dayofbirth"
+    t.integer "age"
+    t.string "sex"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_models_on_user_id"
+  end
+
   create_table "testms", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "user_options", force: :cascade do |t|
+    t.string "key"
+    t.string "value"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "useroptions", force: :cascade do |t|
+    t.boolean "that_day"
+    t.boolean "three_days_before"
+    t.boolean "seven_days_before"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_useroptions_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -41,4 +82,6 @@ ActiveRecord::Schema.define(version: 2022_03_26_070017) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "birthdays", "users"
+  add_foreign_key "models", "users"
 end

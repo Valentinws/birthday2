@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @model.Birthday %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @model.name %>
+</p>
+
+<p>
+  <strong>Dayofbirth:</strong>
+  <%= @model.dayofbirth %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @model.age %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @model.sex %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @model.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_model_path(@model) %> |
+<%= link_to 'Back', models_path %>

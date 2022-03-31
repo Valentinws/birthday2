@@ -9,10 +9,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # POST /resource
-  # def create
-  #   super
-  # end
+  #POST /resource
+  def create
+    super
+    @useroption = Useroption.new( user_id: current_user[:id])
+    @useroption.save
+  end
 
   # GET /resource/edit
   # def edit

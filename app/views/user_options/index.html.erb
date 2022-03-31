@@ -1,0 +1,32 @@
+
+<div class="container">
+  
+  <% @available_options.each do |option_name|%>
+    <% @opt = @options[option_name.to_s]&.first%>
+    <% @option_name = option_name%>
+          <%= @option_name %>
+          <%= @available_options.to_json %>
+          <%= @opt.to_json %>
+
+    <div class="row">
+        <div class="col">
+         <%=option_name.to_s.humanize%>
+        </div>
+        <div class="col">
+         <%= @opt.nil? ? 'false' :  @opt.value %>
+        </div>
+        
+        <div class="col">
+        <%  if @opt.present?%>
+          <%= link_to 'Edit', user_option_path(@opt)%>
+        <%else%>
+          <%= button_to "Add Option", user_option_path(@option_name), method: :post %>
+          <%# <%= link_to 'Edit', user_option_path(@option_name), method:'post' %> 
+        <%end%>
+          
+        </div>
+    </div>
+  <%end%>
+</div>
+
+

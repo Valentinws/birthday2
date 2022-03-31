@@ -8,6 +8,7 @@ gem 'rails', '~> 6.1.5'
 gem 'devise'
 gem 'bootstrap', '~> 5.1.3'
 gem 'sprockets-rails', '>= 2.3.2'
+gem 'sendgrid-ruby'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets

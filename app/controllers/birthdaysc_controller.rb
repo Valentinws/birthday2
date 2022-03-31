@@ -8,6 +8,7 @@ class BirthdayscController < ApplicationController
 
   end
   
+  
   def create
     
     # @birthdaylocal = Birthdaym.new(birthdaym_params)

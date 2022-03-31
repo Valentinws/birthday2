@@ -1,0 +1,26 @@
+
+    <%# <%= form_with(mode: @useroption, url: ) %> 
+    <%= form_with(model: @useroption, url: useroption_path(@useroption.id), method:'put' , local: true) do |f| %>
+     <h1>Cand doriti sa primiti notificarile</h1> <br>
+
+        <div class="form-check">
+             
+            <%= f.check_box :that_day, { class:"form-check-input" }%> 
+            <%= f.label :that_day, 'in ziua respectiva', class:'form-check-label'%> 
+        </div>
+        <div class="form-check">
+             
+            <%= f.check_box :three_days_before, { class:"form-check-input" }%> 
+            <%= f.label :three_days_before, 'cu 3 zile inainte', class:'form-check-label'%> 
+        </div>
+        <div class="form-check">
+             
+            <%= f.check_box :seven_days_before ,{ class:"form-check-input" }%> 
+            <%= f.label :seven_days_before, 'cu 7 zile inainte', class:'form-check-label'%> 
+        </div><br>
+    <%= f.submit 'Update options', class:'btn btn-warning'%>
+    
+<% end %>
+<br>
+<br>
+<%= @useroption.inspect%>
